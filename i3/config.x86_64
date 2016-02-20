@@ -200,3 +200,5 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+
+exec --no-startup-id "feh --bg-fill ~/Pictures/pink-floyd_1.png"

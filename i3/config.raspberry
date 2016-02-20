@@ -165,3 +165,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
 }
+
+
+exec --no-startup-id "feh --bg-fill ~/Pictures/pink-floyd_1.png"
