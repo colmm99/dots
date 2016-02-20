@@ -1,5 +1,8 @@
-# Do Files to get my desktop working anywhere.
-My Dot Files
+# Dot Files 
+To get my desktop working anywhere on the raspberry and other linux systems.
+
+## My Dot Files
+--------------
 * i3, custom workspaces
 * Pictures for i3 lock screen
 * Awesome Fonts
