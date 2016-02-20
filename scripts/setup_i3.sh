@@ -21,7 +21,7 @@ cp -v ../pictures/*.png ~/Pictures
 
 # Copy Files to Raspberry PI, for i3 first
 if [ "${PLATFORM}" == "raspberry" ];then
-	cp -v ../i3/config.$PLATFORM /tmp/config.$PLATFORM.$RANDOM
-elif [ "${PLATFORM}" == "raspberry" ];then
-	cp -v ../i3/config /tmp/config.$PLATFORM.$RANDOM
-else 
+	cp -v ../i3/config.$PLATFORM ~/.i3/config
+elif [ "${PLATFORM}" == "linux" ];then
+	cp -v ../i3/config ~/.i3/config
+fi 
