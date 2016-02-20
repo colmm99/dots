@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# colmm99: 2016-02-19
+#
 
 check_platform ()
 {
@@ -11,6 +14,13 @@ check_platform ()
 		PLATFORM=unknown
 	fi
 }
+
+fonts()
+{
+	./install_awesome_fonts.sh
+}
+
+fonts
 
 check_platform
 echo "Hardware=$PLATFORM"
@@ -25,3 +35,6 @@ if [ "${PLATFORM}" == "raspberry" ];then
 elif [ "${PLATFORM}" == "linux" ];then
 	cp -v ../i3/config ~/.i3/config
 fi 
+
+
+
