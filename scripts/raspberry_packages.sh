@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PACKAGE_LIST="vim 
-              i3 feh
+              	i3 feh
 	      	rdesktop terminator
 		iceweasel 
 		cmatrix 

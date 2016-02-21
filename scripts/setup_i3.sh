@@ -5,10 +5,13 @@
 
 check_platform ()
 {
-	HARDWARE=$(grep Hardware /proc/cpuinfo | awk '{ print $3 }')
-	if [ "${HARDWARE}" == "BCM2709" ];then
+	#HARDWARE=$(grep Hardware /proc/cpuinfo | awk '{ print $3 }')
+	HARDWARE=$(uname -m)
+	if [ "${HARDWARE}" == "armv7l" ];then
 		echo "Raspberry Pi 2"
 		PLATFORM=raspberry
+	elif [ "${HARDWARE}" == "x86_64" ];then
+		PLATFORM=linux
 	else
 		echo "Unknown Hardware"
 		PLATFORM=unknown
@@ -34,10 +37,5 @@ cp -v ../pictures/*.png ~/Pictures
 #
 # Copy Files to Raspberry PI, for i3 first
 #
-if [ "${PLATFORM}" == "raspberry" ];then
-	cp -v ../i3/config.$PLATFORM ~/.i3/config
-	cp -v ../i3/i3blocks.conf ~/.i3blocks.conf
-elif [ "${PLATFORM}" == "linux" ];then
-	cp -v ../i3/config.x86_64 ~/.i3/config
-	cp -v ../i3/i3blocks.conf.x86_64 ~/.i3blocks.conf
-fi 
+cp -v ../i3/config.$PLATFORM ~/.i3/config
+cp -v ../i3/i3blocks.conf.$PLATFORM ~/.i3blocks.conf
