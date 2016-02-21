@@ -39,3 +39,7 @@ cp -v ../pictures/*.png ~/Pictures
 #
 cp -v ../i3/config.$PLATFORM ~/.i3/config
 cp -v ../i3/i3blocks.conf.$PLATFORM ~/.i3blocks.conf
+
+
+# VIMrc 
+cp -v ../rcs/vimrc ~/.vimrc
