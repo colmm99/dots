@@ -199,6 +199,8 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
-exec i3-config-wizard
+#exec i3-config-wizard
 
-exec --no-startup-id "feh --bg-fill ~/Pictures/pink-floyd_1.png"
+#exec --no-startup-id "feh --bg-fill ~/Pictures/pink-floyd_1.png"
+#exec --no-startup-id "feh --bg-scale ~/Pictures/audi_r8.png"
+exec --no-startup-id "feh --bg-fill ~/Pictures/pink-floyd-dark-side-of-the-moon.png"
