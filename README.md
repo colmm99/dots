@@ -9,4 +9,7 @@ To get my desktop working anywhere on the raspberry and other linux systems.
 * Script to Install dot file into place
 
 
-### TODO
+### Install
+
+Execute ./install.sh
+

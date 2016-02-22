@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Copy all the basics into place
+# colmm99: 2016-02-22
+#
+OLD_PWD=$PWD
+
+cd scripts
+./setup_i3.sh
+cd -
+
+ARCH=$(uname -m)
+
+if [ "${ARCH}" == "x86_64" ];then
+	./scripts/arch_apps.sh
+elif [ "${ARCH}" == "armv7l" ];then
+	./scripts/raspberry_packages.sh
+fi
