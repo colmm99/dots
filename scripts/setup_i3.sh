@@ -6,12 +6,12 @@
 check_platform ()
 {
 	#HARDWARE=$(grep Hardware /proc/cpuinfo | awk '{ print $3 }')
-	HARDWARE=$(uname -m)
-	if [ "${HARDWARE}" == "armv7l" ];then
+	PLATFORM=$(uname -m)
+	if [ "${PLATFORM}" == "armv7l" ];then
 		echo "Raspberry Pi 2"
 		PLATFORM=raspberry
-	elif [ "${HARDWARE}" == "x86_64" ];then
-		PLATFORM=linux
+	elif [ "${PLATFORM}" == "x86_64" ];then
+		PLATFORM="linux"
 	else
 		echo "Unknown Hardware"
 		PLATFORM=unknown
@@ -24,7 +24,9 @@ fonts()
 	./install_awesome_fonts.sh
 }
 
+#
 # Run functions
+#
 fonts
 check_platform
 
@@ -40,6 +42,10 @@ cp -v ../pictures/*.png ~/Pictures
 cp -v ../i3/config.$PLATFORM ~/.i3/config
 cp -v ../i3/i3blocks.conf.$PLATFORM ~/.i3blocks.conf
 
-
-# VIMrc 
-cp -v ../rcs/vimrc ~/.vimrc
+#
+# Copy RC Files into place
+#
+for RCFILE in $(ls ../rcs/)
+do
+	cp -v ../rcs/$RCFILE ~/.$RCFILE
+done
