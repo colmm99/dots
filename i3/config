@@ -154,3 +154,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
 }
+
+
+exec --no-startup-id "feh --bg-fill ~/Pictures/pink-floyd-dark-side-of-the-moon.png"
+
+
+#exec "xrandr --output HDMI1 --auto --right-of LVDS1"
