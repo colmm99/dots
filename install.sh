@@ -3,6 +3,8 @@
 # Copy all the basics into place
 # colmm99: 2016-02-22
 #
+# Test via Circle CI
+#
 OLD_PWD=$PWD
 
 cd scripts
