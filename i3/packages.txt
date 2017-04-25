@@ -94,8 +94,10 @@ sshpass
 tcl
 terminator
 tmux
+unzip
 webrtc-audio-processing
 wget
 wiredtiger
 xf86-video-ati
 yaml-cpp
+zip
