@@ -1,7 +1,6 @@
 #!/bin/bash
 
-PACKAGE_LIST="vim 
-              	i3 feh
+PACKAGE_LIST="feh
 	      	rdesktop 
 		terminator
 		cmatrix 

@@ -18,3 +18,6 @@ if [ "${ARCH}" == "x86_64" ];then
 elif [ "${ARCH}" == "armv7l" ];then
 	./scripts/raspberry_packages.sh
 fi
+
+echo "Install Oh My zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
