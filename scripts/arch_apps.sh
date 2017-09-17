@@ -6,6 +6,8 @@ PACKAGE_LIST="feh
 		cmatrix 
 		iotop htop glances 
 		zsh 
+                tmux
+                perf
 		pm-utils
 		ansible"
 
