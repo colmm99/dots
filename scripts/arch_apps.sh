@@ -2,6 +2,7 @@
 
 PACKAGE_LIST="feh
 	      	rdesktop 
+                git
 		terminator
 		cmatrix 
 		iotop htop glances 
