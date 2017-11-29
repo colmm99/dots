@@ -1,12 +1,14 @@
 #!/bin/bash
 
-PACKAGE_LIST="vim 
-              	i3 feh
+PACKAGE_LIST="feh
 	      	rdesktop 
+                git
 		terminator
 		cmatrix 
 		iotop htop glances 
 		zsh 
+                tmux
+                perf
 		pm-utils
 		ansible"
 
