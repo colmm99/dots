@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman-mirrors -c Ireland,United_Kingdom,France
+
 PACKAGE_LIST="feh
 	      	rdesktop 
                 git
