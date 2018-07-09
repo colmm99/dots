@@ -20,3 +20,9 @@ function stopwatch(){
     sleep 0.1
    done
 }
+
+function team-instances () {
+        aws ec2 describe-instances --filters "Name=tag:Name,Values=jorbloggs*" --query 'Reservations[].Instances[].{Id:InstanceId, Name:Tags[?Key==`Name`].Value | [0],State:State.Name,PublicIP:PublicIpAddress,PrivateIP:PrivateIpAddress}' --output table
+}
+
+
