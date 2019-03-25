@@ -1,1 +1,2 @@
 syntax on
+au BufNewFile,BufRead Jenkinsfile setf groovy
