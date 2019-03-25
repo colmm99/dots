@@ -4,7 +4,11 @@ PROMPT='$(kube_ps1)'$PROMPT
 
 alias watch='watch '
 alias k="/usr/local/bin/kubectl"
+alias kg="/usr/local/bin/kubectl get "
+alias h="/usr/local/bin/helm"
+alias krestarts='/usr/local/bin/kubectl get pods --all-namespaces -o wide | awk '\''{ if ($5 != 0 ) print $0;}'\'' '
 
+alias proxy_me="curl --location-trusted -v --user $USER --ntlm http://www.apple.com/"
 
 function countdown(){
    date1=$((`date +%s` + $1));
@@ -24,5 +28,6 @@ function stopwatch(){
 function team-instances () {
         aws ec2 describe-instances --filters "Name=tag:Name,Values=jorbloggs*" --query 'Reservations[].Instances[].{Id:InstanceId, Name:Tags[?Key==`Name`].Value | [0],State:State.Name,PublicIP:PublicIpAddress,PrivateIP:PrivateIpAddress}' --output table
 }
+
 
 
