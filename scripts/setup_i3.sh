@@ -33,6 +33,9 @@ check_platform
 #
 # Copy Pictures into place for i3 Backgrounds and screen locks
 #
+if [ ! -d ~/Pictures ];then
+    mkdir ~/Pictures
+fi
 cp -v ../pictures/*.png ~/Pictures
 
 
