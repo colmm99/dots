@@ -1,0 +1,6 @@
+tasks:
+  - name: Install top
+    yum:
+      name: top
+      state: present
+      
