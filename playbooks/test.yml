@@ -1,6 +1,11 @@
-tasks:
-  - name: Install top
-    yum:
-      name: top
-      state: present
-      
+---
+- hosts: all
+  become: false
+  serial: "100%"
+  gather_facts: True
+  tasks:
+    - name: Install top
+      yum:
+        name: top
+        state: present
+ 
