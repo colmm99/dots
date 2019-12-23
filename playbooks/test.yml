@@ -2,7 +2,7 @@
 - hosts: all
   become: false
   serial: "100%"
-  gather_facts: True
+  gather_facts: False
   tasks:
     - name: Install top
       yum:
