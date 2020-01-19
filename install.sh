@@ -33,13 +33,15 @@ if [ ! kube-ps1 ];then
 else
     cd kube-ps1
     git pull
+    cd -
 fi
 
-cd
 
-if [ ! /Projects/kube-ps1.git ]; then
+if [ ! ~/Projects/kube-ps1.git ]; then
     echo "Setup kube-ps1.sh"
     ln -s ~/Projects/kube-ps1.git kube-ps1.git
 fi
 
+cd ~/Projects/dots
 ./tmux.sh
+

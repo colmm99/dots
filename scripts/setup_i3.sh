@@ -12,6 +12,8 @@ check_platform ()
 		PLATFORM=raspberry
 	elif [ "${PLATFORM}" == "x86_64" ];then
 		PLATFORM="linux"
+	elif [ "${PLATFORM}" == "aarch64" ];then
+		PLATFORM="pinebookpro"
 	else
 		echo "Unknown Hardware"
 		PLATFORM=unknown
@@ -38,7 +40,7 @@ if [ ! -d ~/Pictures ];then
 fi
 cp -v ../pictures/*.png ~/Pictures
 
-
+sudo pacman -Syy i3
 #
 # Copy Files to Raspberry PI, for i3 first
 #
