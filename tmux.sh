@@ -10,4 +10,6 @@ fi
 
 cp rcs/tmux.conf ~/.tmux.conf
 
+cp -v rcs/tmux.conf ~/.tmux.conf
+
 tmux source ~/.tmux.conf

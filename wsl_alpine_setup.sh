@@ -9,7 +9,9 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 NC='\033[0m' # No Color
 
-printf "\n${YELLOW}Yellow\n${BLUE}Blue\n${PURPLE}Purple\n"
+
+printf "\n${YELLOW}If you need to become root then follow the link here. https://github.com/agowa338/WSL-DistroLauncher-Alpine ${NC}\n"
+printf "${YELLOW}Start alpine as root and add sudo, alpine config --default-user root, add sudo change root password and then switch back to your username ${NC}\n"
 
 printf "\n${GREEN}[INFO] APK Update ${NC}\n"
 sudo apk update
@@ -19,6 +21,7 @@ sudo apk upgrade
 
 printf "\n${GREEN}[INFO] APK install APPS ${NC}\n"
 sudo apk add tmux htop openssh-client vim \
+<<<<<<< Updated upstream
 	iotop glances tree \
 	terraform ansible zip unzip \
 	bind-tools python ncurses less figlet
@@ -28,9 +31,20 @@ if [ ! -f $(which pip3) ];then
    curl -O https://bootstrap.pypa.io/get-pip.py
    python get-pip.py --user
 fi
+=======
+	iotop glances tree bash \
+	terraform ansible zip unzip curl wget \
+	bind-tools python ncurses less sl
+
+printf "\n${GREEN}[INFO] Install Pip3 ${NC}\n"
+curl -O https://bootstrap.pypa.io/3.4/get-pip.py
+python3 get-pip.py --user
+python3 -m pip install --user --upgrade pip
+pip3 -V
+>>>>>>> Stashed changes
 
 printf "\n${GREEN}[INFO] Upgrade AWS CLI Version ${NC}\n"
-pip3 install --upgrade pip --user
+pip3 install awscli --upgrade --user
 
 export PATH=~/.local/bin:$PATH
 printf "\n${GREEN}[INFO] Checking AWS CLI Version ${NC}\n"
