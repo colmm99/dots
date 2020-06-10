@@ -13,11 +13,14 @@ PACKAGE_LIST="feh
                 pm-utils
 		locales-all
 		screenfetch
+		figlet
+		vim
                 ansible"
 
                 # Old Apps
                 #pm-utils
-sudo apt install ${PACKAGE_LIST}
+sudo apt-get update -y
+sudo apt-get install -y --fix-missing ${PACKAGE_LIST}
 
 sudo pip install awscli
 

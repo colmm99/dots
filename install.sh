@@ -25,7 +25,7 @@ echo "Install Oh My zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
-if [ ! ~/Projects ];then mkdir ~/Projects; fi
+if [ ! -d ~/Projects ];then mkdir ~/Projects; fi
 
 cd ~/Projects
 if [ ! kube-ps1 ];then
