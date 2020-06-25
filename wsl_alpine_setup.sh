@@ -23,7 +23,8 @@ printf "\n${GREEN}[INFO] APK install APPS ${NC}\n"
 sudo apk add tmux htop openssh-client vim \
 	iotop glances tree \
 	terraform ansible zip unzip \
-	bind-tools python ncurses less figlet sl
+	bind-tools python ncurses less figlet sl \
+	curl
 
 if [ ! -f $(which pip3) ];then
    printf "\n${GREEN}[INFO] Install Pip3 ${NC}\n"
@@ -52,3 +53,8 @@ fi
 printf "\n${GREEN}[INFO] Install OhMyZSH ${NC}\n"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ];then
+   printf "\n${GREEN}[INFO] Install ZSH Auto Suggestions ${NC}\n"
+   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   sed -i 's/^plugins=/$$ plugins=(git zsh-autosuggestions TEST)/' ~/.zshrc
+fi
