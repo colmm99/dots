@@ -24,7 +24,7 @@ sudo apk add tmux htop openssh-client vim \
 	iotop glances tree \
 	terraform ansible zip unzip \
 	bind-tools python ncurses less figlet sl \
-	curl
+	curl exa
 
 if [ ! -f $(which pip3) ];then
    printf "\n${GREEN}[INFO] Install Pip3 ${NC}\n"
